@@ -1,0 +1,29 @@
+body{
+    background-image: url(../images/pixel-heart.png) ;
+}
+h1{
+    text-align: left;
+}
+h1 span{
+background-color: pink;
+}
+.instructions{
+    background-color: thistle;
+    font-family: Arial, Helvetica, sans-serif;   
+    text-align: justify;
+}
+.mainNumber{
+    font-size:50px;
+    background-color: turquoise;
+    text-align: center;
+}
+.scores{
+    background-color: lightblue;
+}
+.gems{
+    align-items: center;
+}
+img{
+    width:100px;
+    height: 100px;
+}
