@@ -4,12 +4,15 @@ $(document).ready(function(){
 var wins = 0;
 var losses = 0;
 var randomNumber=Math.floor(Math.random() * 120) + 19; 
-var purpleNumber = 0;
-var whiteNumber =0;
-var blueNumber =0;
-var greenNumber =0;
+var purpleNumber = Math.floor(Math.random()*12)+1;
+var whiteNumber =Math.floor(Math.random()*12)+1;
+var blueNumber =Math.floor(Math.random()*12)+1;
+var greenNumber =Math.floor(Math.random()*12)+1;
 
-
+console.log("Purple " + purpleNumber);
+console.log("White " + whiteNumber);
+console.log("Blue " + blueNumber);
+console.log("Green " + greenNumber);
 
 //Variables for the HTML to display the text with results
 $("#main-number-text").text(randomNumber);
@@ -23,23 +26,23 @@ var lossesText = document.getElementById("losses-text");
 
 //Assign a random number between 1 and 12 to each crystal
 
-//On click, have the value of the crystal clicked, the number is displayed on the bottom square and it is added on with each click
-$(".purple").click(function () {
-    purpleNumber=Math.floor(Math.random() * 12) + 1
-    console.log(purpleNumber);
-})
-$(".white").click(function () {
-    whiteNumber=Math.floor(Math.random() * 12) + 1
-    console.log(whiteNumber);
-})
-$(".blue").click(function () {
-    blueNumber=Math.floor(Math.random() * 12) + 1
-    console.log(blueNumber);
-})
-$(".green").click(function () {
-    greenNumber=Math.floor(Math.random() * 12) + 1
-    console.log(greenNumber);
-})
+//NOT On click, but on document. ready. so it stays the same. have the value of the crystal clicked, the number is displayed on the bottom square and it is added on with each click
+// $(".purple").click(function () {
+//     purpleNumber=Math.floor(Math.random() * 12) + 1
+    
+// })
+// $(".white").click(function () {
+//     whiteNumber=Math.floor(Math.random() * 12) + 1
+    
+// })
+// $(".blue").click(function () {
+//     blueNumber=Math.floor(Math.random() * 12) + 1
+    
+// })
+// $(".green").click(function () {
+//     greenNumber=Math.floor(Math.random() * 12) + 1
+    
+// })
 //If the number is smaller than above, continue, if it matches, you win, if it goes over, you lose and the computer generates a new random number
 
 });

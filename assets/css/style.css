@@ -12,7 +12,7 @@ background-color: pink;
     font-family: Arial, Helvetica, sans-serif;   
     text-align: justify;
 }
-.mainNumber{
+#main-number-text{
     font-size:50px;
     background-color: turquoise;
     text-align: center;
