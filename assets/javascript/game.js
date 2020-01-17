@@ -1,16 +1,45 @@
+$(document).ready(function(){
+
 //Variables to hold the amount of wins and losses
 var wins = 0;
 var losses = 0;
+var randomNumber=Math.floor(Math.random() * 120) + 19; 
+var purpleNumber = 0;
+var whiteNumber =0;
+var blueNumber =0;
+var greenNumber =0;
+
+
 
 //Variables for the HTML to display the text with results
+$("#main-number-text").text(randomNumber);
 var mainNumberText = document.getElementById("main-number-text"); 
 var youWinText = document.getElementById("you-win-text");
 var youLostText = document.getElementById("you-lost-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 
-function mainNumber() {
-  document.getElementById("mainNumber").innerHTML =
-    Math.floor(Math.random() * 120) + 19;
-}
-console.log(mainNumber);
+//Generate a random number between 19 and 120 and display it in the blue box
+
+//Assign a random number between 1 and 12 to each crystal
+
+//On click, have the value of the crystal clicked, the number is displayed on the bottom square and it is added on with each click
+$(".purple").click(function () {
+    purpleNumber=Math.floor(Math.random() * 12) + 1
+    console.log(purpleNumber);
+})
+$(".white").click(function () {
+    whiteNumber=Math.floor(Math.random() * 12) + 1
+    console.log(whiteNumber);
+})
+$(".blue").click(function () {
+    blueNumber=Math.floor(Math.random() * 12) + 1
+    console.log(blueNumber);
+})
+$(".green").click(function () {
+    greenNumber=Math.floor(Math.random() * 12) + 1
+    console.log(greenNumber);
+})
+//If the number is smaller than above, continue, if it matches, you win, if it goes over, you lose and the computer generates a new random number
+
+});

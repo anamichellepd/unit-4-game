@@ -23,6 +23,9 @@ background-color: pink;
 .gems{
     align-items: center;
 }
+.totalScore{
+    background-color: lightsalmon;
+}
 img{
     width:100px;
     height: 100px;
