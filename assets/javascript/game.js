@@ -2,6 +2,7 @@ $(document).ready(function() {
   //Variables to hold the amount of wins and losses
   var wins = 0;
   var losses = 0;
+  var status = 0;
   //Generate a random number between 19 and 120 and display it in the blue box
   var randomNumber = Math.floor(Math.random() * 120) + 19;
   //Assign a random number between 1 and 12 to each crystal
@@ -41,6 +42,7 @@ $(document).ready(function() {
     //If the number is smaller than above, continue, if it matches, you win, if it goes over, you lose and the computer generates a new random number
     if (totalScore === randomNumber) {
       wins++;
+    status =  $(".you-win-text").text("YOU WIN!!");
       $(".wins-text").text("Wins: " + wins);
       console.log("you win");
       gameReset();
@@ -48,6 +50,7 @@ $(document).ready(function() {
     }
     if (totalScore > randomNumber) {
       losses++;
+     status =  $(".you-win-text").text("LOSER!");
       $(".losses-text").text("Losses: " + losses);
       console.log("you went too far");
       gameReset();
@@ -57,6 +60,8 @@ $(document).ready(function() {
 
   //Variables for the HTML to display the text with results
   $("#main-number-text").text(randomNumber);
+  $("you-win-text").text("YOU WIN!!")
+  $("you-lose-text").text("LOSER!")
   // var mainNumberText = document.getElementById("main-number-text");
   // var youWinText = document.getElementById("you-win-text");
   // var youLostText = document.getElementById("you-lost-text");
